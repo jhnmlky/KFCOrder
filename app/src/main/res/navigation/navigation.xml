@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/front">
+
+    <fragment
+        android:id="@+id/front"
+        android:name="com.kfccorp.kfcorder.ui.Front"
+        android:label="front"
+        tools:layout="@layout/front" >
+        <action
+            android:id="@+id/action_front_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.kfccorp.kfcorder.ui.Menu"
+        android:label="menu"
+        tools:layout="@layout/menu" >
+        <action
+            android:id="@+id/action_menu_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_menu_to_cart"
+            app:destination="@id/cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/details"
+        android:name="com.kfccorp.kfcorder.ui.Details"
+        android:label="details"
+        tools:layout="@layout/details" />
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.kfccorp.kfcorder.ui.Cart"
+        android:label="cart"
+        tools:layout="@layout/cart" >
+        <action
+            android:id="@+id/action_cart_to_details"
+            app:destination="@id/details" />
+        <action
+            android:id="@+id/action_cart_to_checkout"
+            app:destination="@id/checkout" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkout"
+        android:name="com.kfccorp.kfcorder.ui.Checkout"
+        android:label="checkout"
+        tools:layout="@layout/checkout" />
+</navigation>

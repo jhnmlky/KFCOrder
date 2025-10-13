@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.KFCOrder" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">#E4002B</item>
+    </style>
+
+    <style name="Theme.KFCOrder" parent="Base.Theme.KFCOrder" />
+</resources>
